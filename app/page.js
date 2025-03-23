@@ -1,65 +1,41 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-
+'use client';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import styles from './page.module.css';
 
 export default function Home() {
+  const [inputValue, setInputValue] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+  const router = useRouter();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if ((inputValue.toLowerCase() === 'cinthia')||(inputValue.toLowerCase() === 'cinthia edith')||(inputValue.toLowerCase() === 'cinthia vazquez')||(inputValue.toLowerCase() === 'cinthia vazquez tolentino')||(inputValue.toLowerCase() === 'cinthia edith vazquez tolentino')) {
+      router.push('/Principal');
+    } else {
+      setErrorMessage('Error: quien eres?');
+    }
+  };
+
   return (
-    <div className={styles.divbig}>
-      {/* Sección 1 */}
-      <section className={styles.section1}>
-        <div className={styles.container}>
-          <h1>Sección 1</h1>
-          <p>Esta es la primera sección de nuestro sitio web.</p>
-          <a href="#section2" className={styles.ctaButton}>Ir a Sección 2</a>
-        </div>
-      </section>
+    <div className={styles.container}>
+      <h1 className={styles.title}>QUIEN ERES?</h1>
 
-      {/* Sección 2 */}
-      <section id="section2" className={styles.section2}>
-        <div className={styles.container}>
-          <h2>Sección 2</h2>
-          <p>
-            Esta es la segunda sección. Aquí puedes agregar más detalles sobre tu
-            proyecto o empresa.
-          </p>
-        </div>
-      </section>
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <input
+          type="text"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+          placeholder="Escribe tu nombre..."
+          className={styles.input}
+        />
+        <button type="submit" className={styles.button}>
+          Enviar
+        </button>
+      </form>
 
-      {/* Sección 3 */}
-      <section className={styles.section3}>
-        <div className={styles.container}>
-          <h2>Sección 3</h2>
-          <div className={styles.grid}>
-            <div className={styles.card}>
-              <h3>Característica 1</h3>
-              <p>Descripción breve de la característica 1.</p>
-            </div>
-            <div className={styles.card}>
-              <h3>Característica 2</h3>
-              <p>Descripción breve de la característica 2.</p>
-            </div>
-            <div className={styles.card}>
-              <h3>Característica 3</h3>
-              <p>Descripción breve de la característica 3.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Sección 4 */}
-      <section className={styles.section4}>
-        <div className={styles.container}>
-          <h2>Sección 4</h2>
-          <form className={styles.form}>
-            <input type="text" placeholder="Nombre" required />
-            <input type="email" placeholder="Correo Electrónico" required />
-            <textarea placeholder="Mensaje" rows="5" required></textarea>
-            <button type="submit">Enviar</button>
-          </form>
-        </div>
-      </section>
+      {errorMessage && <p className={styles.errorMessage}>{errorMessage}</p>}
     </div>
   );
 }
-  
-
