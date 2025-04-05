@@ -1,0 +1,29 @@
+.titulo{
+    text-align: center;
+    color: #000000;
+    text-shadow: 20px 35px 25px#000000;
+}
+
+
+.square {
+    
+    position: absolute;
+    left: 47%;
+    top: 30%;
+    width: 100px;
+    height: 100px;
+    background-color: #f8d1a4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    font-weight: bold;
+    cursor: none;
+    user-select: none;
+    transition: transform 0.2s ease-out, left 0.3s ease-out, top 0.3s ease-out;
+    box-shadow: 35px 45px 80px 1px #000000;
+  }
+  
+  .square:hover {
+    transform: scale(1.1);
+  }

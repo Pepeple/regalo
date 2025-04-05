@@ -1,0 +1,35 @@
+.container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 600px;
+
+}
+.explicacion{
+    font-size: 18px;
+    background: linear-gradient(135deg, #f8d1a4, #38383800);
+    color: white;
+    text-align: center;
+    padding: 50px 50px;
+    width: 600px;
+    height: 400px;
+    box-shadow: 2px 4px 20px 0 #000000;
+}
+.explicacion h1{
+    font-size: 45px;
+    padding-bottom: 30px;
+    color: white;
+    text-align: center;
+}
+.contador{
+    font-size: 68px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #38383800,  #f8d1a4);
+    color: darkred;
+    text-align: center;
+    padding: 200px 50px;
+    width: 600px;
+    height: 100px;
+    box-shadow: 2px 4px 20px 0 #000000;
+}

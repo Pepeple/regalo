@@ -1,0 +1,78 @@
+.hoja{
+    background-color: white;
+    width: 390px;
+    height: 550px;
+    margin: auto;
+    
+    background-color: #e0aeae;
+    
+}
+.hoja::before{
+    content: "";
+    position: absolute;
+    border: 3px solid #003049;
+    border-style: dotted;
+    width: 365px;
+    height: 525px;;
+    margin: 10px 10px;
+}
+.titulo{
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+    color: #000000;
+    font-family: cursive;
+    padding: 20px;
+    padding-bottom: 0;
+    
+    }
+.texto{
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #000000;
+    font-family: cursive;
+    padding: 20px;
+}
+.imagecontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    animation: inicio 10s linear;
+}
+.customimage{
+    filter: sepia(200%);
+    flex-grow: 1;
+}
+.customimagefecha{
+    filter: sepia(200%);
+    max-height: 100px;
+    width: 100px;
+    margin: 50px;
+    margin-bottom: 0;
+    border: 3px solid #ffffff;
+    
+}
+.customimagefecha:first-child{
+    
+    margin: 200px;
+    margin-bottom: 0;
+}
+.customimage:nth-child(5), .customimage:nth-child(23){
+    margin-top: 20px;
+}
+.inicio{
+
+    animation: inicio 3s linear;
+}
+
+@keyframes inicio {
+    0%{
+        opacity: 0;
+
+    }
+    100%{
+        opacity: 1;
+    }
+}

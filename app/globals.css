@@ -1,9 +1,9 @@
 :root {
   --primary-color: #3498db;
   --secondary-color: #2ecc71;
-  --background-color: #1b1818;
+  --background-color: #848382;
   --text-color: #333;
-  --header-bg: #9e779b;
+  --header-bg: #605d5a;
   --header-text: #ecf0f1;
   --footer-bg: #34495e;
   --footer-text: #ecf0f1;
@@ -12,7 +12,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
@@ -23,7 +22,7 @@ body {
 }
 
 .container {
-  width: 90%;
+  width: 80%;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -31,8 +30,8 @@ body {
 .header {
   background-color: var(--header-bg);
   color: var(--header-text);
-  padding: 20px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  box-shadow: 0 25px 50px #e8c39e94;
 }
 
 .header h1 {
@@ -55,17 +54,36 @@ body {
   color: var(--header-text);
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease;
+  transition: color 0.7s ease;
 }
-
+.nav-links button {
+  background-color: transparent;
+  color:  var(--header-text);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.7s ease;
+}
+.nav-links button:hover {
+  color: #ffd2a4;
+}
 .nav-links a:hover {
-  color: #1b1818;
+  color: #ffd2a4;
+}
+.menu-desplegable{
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+  align-items: baseline;
 }
 
 .main-content {
   padding: 40px 0;
 }
 
+
+/* 
 .footer {
   background-color: var(--footer-bg);
   color: var(--footer-text);
@@ -78,4 +96,4 @@ body {
 .footer p {
   margin: 0;
   font-size: 0.9rem;
-}
+} */

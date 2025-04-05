@@ -10,7 +10,7 @@
 
 /* Sección 1 */
 .section1 {
-  background: linear-gradient(135deg, #5e368a, #383838);
+  background: linear-gradient(135deg, #f8d1a4, #38383800);
   color: white;
   text-align: center;
   padding: 100px 0;
@@ -31,7 +31,7 @@
 }
 
 .ctaButton {
-  background-color: #ff6f61;
+  background-color: #eaccad;
   color: white;
   padding: 12px 24px;
   text-decoration: none;
@@ -42,16 +42,17 @@
 }
 
 .ctaButton:hover {
-  background-color: #ff3b2f;
+  background-color: #848382;
   transform: translateY(-5px);
 }
 
 /* Sección 2 */
 .section2 {
-  background-color: #f9f9f9;
+  
+  background: linear-gradient(135deg, #f8d1a4, #38383800);
   margin: 0 50px;
   width: 500px;
-  height: 500px;
+  height: 1100px;
   text-align: center;
 }
 
@@ -70,7 +71,7 @@
 
 /* Sección 3 */
 .section3 {
-  background-color: #ffffff;
+  background: linear-gradient(135deg, #eaccad, #38383800);
   text-align: center;
   margin: 0 50px;
   width: 500px;
@@ -105,10 +106,104 @@
 .card h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #2575fc;
+  color: #333;
 }
 
 .card p {
   font-size: 1rem;
   color: #555;
+}
+
+.section4{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, min-content);
+    gap: 1px;
+    background-color: #f3dbc3;
+    margin: 100px 50px;
+    padding: 20px;
+    
+  background: linear-gradient(135deg, #eaccad, #38383800);
+}
+   
+.imagecustom{
+  width: 0;
+  flex-grow: 1;
+  object-fit:cover;
+
+  overflow: hidden;
+  
+}
+.div1 {
+  grid-column: span 3 / span 3;
+  text-align: center;
+  
+  
+}
+.div1 h2{
+  color: black;
+  font-size: 44px;
+}
+.div1 p{
+  color: black;
+  font-size: 18px;
+}
+.div2 {
+  grid-row-start: 2;
+  align-content: center;
+  display: flex;
+}
+.div3 {
+  grid-column-start: 1;
+  grid-row-start: 3;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 14px;
+  text-align: center;
+  padding: 0px 10px 0px 0px;
+}
+.div4 {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  max-height: 600px;
+  display: flex;
+}
+.div5 {
+  grid-column-start: 2;
+  grid-row-start: 3;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 14px;
+  text-align: center;
+  padding: 0px 10px 0px 0px;
+}
+.div6 {
+  grid-column-start: 3;
+  grid-row-start: 2;
+  align-content: center;
+  display: flex;
+}
+.div7 {
+  grid-row-start: 3;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 14px;
+  text-align: center;
+  padding: 0px 10px 0px 0px;
+}
+
+.volverarriba{
+  background-color: #eaccad88;
+  color: black;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.volverarriba:hover{
+  
+  background-color: #848382;
+  transform: translateY(-5px);
+
 }

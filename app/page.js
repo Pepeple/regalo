@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import styles from './page.module.css';
 
+
 export default function Home() {
   const [inputValue, setInputValue] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -11,7 +12,7 @@ export default function Home() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if ((inputValue.toLowerCase() === 'cinthia')||(inputValue.toLowerCase() === 'cinthia edith')||(inputValue.toLowerCase() === 'cinthia vazquez')||(inputValue.toLowerCase() === 'cinthia vazquez tolentino')||(inputValue.toLowerCase() === 'cinthia edith vazquez tolentino')) {
+    if ((inputValue.toLowerCase() === 'cinthia')||(inputValue.toLowerCase() === 'cinthia edith')||(inputValue.toLowerCase() === 'cinthia vazquez')||(inputValue.toLowerCase() === 'cinthia vazquez tolentino')||(inputValue.toLowerCase() === 'cinthia edith vazquez tolentino')||(inputValue.toLowerCase() === 'cinthia ')) {
       router.push('/Principal');
     } else {
       setErrorMessage('Error: quien eres?');
@@ -19,7 +20,7 @@ export default function Home() {
   };
 
   return (
-    <div className={styles.container}>
+  <div className={styles.container}>
       <h1 className={styles.title}>QUIEN ERES?</h1>
 
       <form className={styles.form} onSubmit={handleSubmit}>
@@ -36,6 +37,9 @@ export default function Home() {
       </form>
 
       {errorMessage && <p className={styles.errorMessage}>{errorMessage}</p>}
-    </div>
+
+      
+    </div> 
+    
   );
 }
