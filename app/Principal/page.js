@@ -91,7 +91,7 @@ export default function Principal() {
 
         <div className={styles.div6}>
                 <Image
-                src="/supercinthia3.JPG"  
+                src="/supercinthia3.png"  
                 alt="cinthia"
                 width={500}
                 height={500}
