@@ -202,22 +202,6 @@ export default function Dibujos()
                 className={styles.customimage}
                 />
                 <Image
-                src="/fecha11.jpeg" 
-                alt="Escrito"
-                width={500}
-                height={500}
-                layout="intrinsic"
-                className={styles.customimagefecha}
-                />
-                <Image
-                src="/escrito11.jpeg" 
-                alt="Escrito"
-                width={500}
-                height={500}
-                layout="intrinsic"
-                className={styles.customimage}
-                />
-                <Image
                 src="/fecha12.jpeg" 
                 alt="Escrito"
                 width={500}
